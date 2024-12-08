@@ -31,7 +31,8 @@ yarn.lock
 .env
 .env.local
 .env.*.local
-.expo-env.d.ts
+expo-env.d.ts
+
 
 # Bundler output
 .expo/*
