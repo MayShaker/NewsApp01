@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { API_KEY } from '@env';
 
+console.log(API_KEY); 
 
 import {
   View,
@@ -23,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
     const fetchArticles = async () => {
       try {
         const response = await fetch(
-          'https://gnews.io/api/v4/top-headlines?lang=en&token=78e496bb1fe9d5a74733c7bacb025cfa'
+         `https://gnews.io/api/v4/top-headlines?lang=en&token=${API_KEY}`
         );
         const data = await response.json();
         setArticles(data.articles);
